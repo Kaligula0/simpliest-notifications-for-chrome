@@ -1,0 +1,1 @@
+fbnotifier-for-chrome
