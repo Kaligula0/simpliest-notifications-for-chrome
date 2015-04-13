@@ -1,4 +1,4 @@
-X FBnotifier (low memory!)
+# FBnotifier (low memory!)
 
 //description from Chrome Store://
 
