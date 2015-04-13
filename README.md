@@ -1,6 +1,7 @@
 # FBnotifier (low memory!)
 
-//description from Chrome Store://
+//description from Chrome Store:
+//https://chrome.google.com/webstore/detail/fbnotifier-low-memory/emlidomckbobabadfkjgblnkoglkmjak
 
 Simple button on your toolbar that checks, counts and shows number of all your Facebook notifications in your language.
 
