@@ -1,0 +1,39 @@
+﻿<html>
+	<head>
+		<script type="text/javascript" src="options.js"></script>
+		<link type="text/css" rel="stylesheet" href="options.css">
+	</head>
+	<body>
+		<form>
+			<input type="checkbox" name="Https" checked="checked" />Use secure HTTPS instead of HTTP.<br />
+			Check for notifications every <input type="text" id="TimerDelay" name="TimerDelay" value="5" style="width:50px;"/> 
+				<select id="TimerDelayUnits">
+					<option value="sec">seconds</option>
+					<option value="min" selected="selected">minutes</option>
+					<option value="hr">hours</option>
+				</select>
+				<small><a href="#" title="Min. 1 minute. You can input any fraction in decimal representation, e.g. 1.5.">[?]</a></small>.<br />
+			<input type="checkbox" name="PlayRingtone" checked="checked" />Play Facebook notification sound if there are new notifications.<br />
+			<input type="checkbox" name="UseNewTab" />Click on the button always opens new tab. (Unchecked = onclick first try to find an opened Facebook tab, otherwise open a new tab.)<br />
+			<br />
+			<br />
+			Note: The extension doesn't know your username and password. You have to stay logged in to Facebook even after closing Facebook tab/window, otherwise the extension will not know whose profile to watch.
+			<br />
+			<hr />
+			<br />
+			Report bugs on <a href="https://github.com/Vinne2/fbnotifier-for-chrome/issues">GitHub</a>.
+			<br />
+			<br />
+			<hr />
+			<br />
+			<p><big>☺</big> If you like it then please buy me a beer <img src="images/beer.gif"> (donate me on <img src="images/PayPal.jpg">: <span class="uln" title="if you see strange sentence about a kangaroo instead of my e-mail – your browser doesn't read the CSS stylesheets. My e-mail address is: karol.paypal (at) o2 (dot) pl :)"><span class="noshow">"My </span>ka<span class="noshow">nga</span>ro<span class="noshow">o is a mamma</span>l.<span class="noshow"> And no </span>p<span class="noshow">r</span>ay<span class="noshow"> from </span>pal<span class="noshow">eolithic e-m</span>@<span class="noshow">il is gonna breathe his </span>o2.<span class="noshow"> He's a </span>pl<span class="noshow">um, though."</span></span>) – any little $/€/£/¥/ƒ/₣/د.إ/₨/лв/¤/… will do! <big>☺</big></p>
+			<p><small>*) I had to pay a fee to Google to be able to share my Chrome extension with you! (Not to mention the time I spend making the extension <big>☺</big>)</small></p>
+			<br />
+			<hr />
+			<br />
+			<small>credits for the icons (published under the Free License of the YOOtheme GmbH) go to <a href="http://www.yootheme.com/icons">YOOtheme</a><!--br />
+			<input type="button" name="save" value="Save"><br />
+			<span id="ok" style="display:none;"><strong>OK!</strong></span-->
+		</form>
+	</body>
+</html>
