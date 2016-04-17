@@ -232,7 +232,7 @@ function checkNotifications(){
 						if (fNot>0) badgeTitle+='\n – '+decode_entities(fNot+' '+fNotRX[1]);
 					chrome.browserAction.setTitle({title:badgeTitle});
 					chrome.browserAction.setBadgeText({text:''+counter});
-					chrome.browserAction.setBadgeBackgroundColor({color:[0,204,51,255]}); // green
+					chrome.browserAction.setBadgeBackgroundColor({color:[208,0,24,255]}); // GMail red // it was green rgb(0,204,51) before
 					clog('Button properties have been set.');
 					if (Sound && (counter>(+localStorage['FBnotifier-counter']))) {
 						clog('Ringtone played.');
