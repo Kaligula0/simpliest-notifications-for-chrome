@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "FBnotifier (low memory!)",
 	"short_name": "FBnotifier",
-	"version": "2.5.2",
+	"version": "2.6.0",
 	"author": "Kaligula",
 
 	"description": "The simpliest FB notifier that consumes very low memory.",
