@@ -202,7 +202,7 @@ function checkNotifications(){
 	window.alreadyChecking = true;
 	clog('Getting page…');
 	var xhr=new XMLHttpRequest();
-	xhr.open('GET',Protocol+'//m.facebook.com/nearby/search/',true); // …/nearby/search/ is a page with relatively least size on FB
+	xhr.open('GET',Protocol+'//mobile.facebook.com/nearby/search/',true); // …/nearby/search/ is a page with relatively least size on FB
 	xhr.onreadystatechange=function(){
 
 		clog('xhr.readyState = '+xhr.readyState);
