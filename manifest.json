@@ -1,16 +1,24 @@
 ﻿{
 	"manifest_version": 2,
-	"name": "FBnotifier (low memory!)",
-	"short_name": "FBnotifier",
+	"name": "Simplest notifier for Facebook (low memory!)",
+	"short_name": "Simplest Notifier for Facebook",
 	"version": "2.6.0",
 	"author": "Kaligula",
 
-	"description": "The simpliest FB notifier that consumes very low memory.",
+	"description": "The simpliest notifier for Facebook (alerts about messages, notifications and requests) that consumes very low memory.",
 	"homepage_url": "https://code.google.com/p/fbnotifier-for-chrome/",
 	"minimum_chrome_version": "18",
 	"permissions": [
+		"http://m.facebook.com/*",
+		"https://m.facebook.com/*",
+		"http://mbasic.facebook.com/*",
+		"https://mbasic.facebook.com/*",
 		"http://mobile.facebook.com/*",
 		"https://mobile.facebook.com/*",
+		"http://www.facebook.com/*",
+		"https://www.facebook.com/*",
+		"http://web.facebook.com/*",
+		"https://web.facebook.com/*",
 		"tabs",
 		"alarms"
 	],
