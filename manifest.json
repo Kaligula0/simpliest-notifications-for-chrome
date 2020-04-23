@@ -1,7 +1,11 @@
 ﻿{
 	"manifest_version": 2,
+	"name": "Simpliest Facebook notifications (low memory)",
+	"short_name": "Simpliest FB notifications",
+	"version": "2.7.2",
 	"author": "Kaligula",
 
+	"description": "Extension checks new notifications on Facebook (messages, notifications, friend requests) but consumes very low memory!",
 	"homepage_url": "https://github.com/Vinne2/simpliest-notifications-for-chrome",
 	"minimum_chrome_version": "18",
 	"permissions": [
