@@ -202,7 +202,7 @@ function checkNotifications(){
 	window.alreadyChecking = true;
 	clog('Getting page…');
 	var xhr=new XMLHttpRequest();
-	xhr.open('GET',Protocol+'//mobile.facebook.com/nearby/search/',true); // …/nearby/search/ is a page with relatively least size on FB
+	xhr.open('GET',Protocol+'//mbasic.facebook.com/menu/bookmarks/',true); // this page on FB has relatively least size (Chrome console: 20.8 KB resources, 9.7 KB transfered)
 	xhr.onreadystatechange=function(){
 
 		clog('xhr.readyState = '+xhr.readyState);
@@ -211,16 +211,16 @@ function checkNotifications(){
 
 			clog( clearTimer() );
 
-			if(xhr.responseText.match('notifications_jewel')){
+			if(xhr.responseText.match('<div id="viewport"')){
 				
 				chrome.browserAction.setIcon({path:'images/icon.png'});
 
-				var fReqRX=xhr.responseText.match(/(?: id="requests_jewel".*?<a .*?<span .*?>)(.*?)(?:<\/span><div .*?<span .*? data-sigil="count">)(.*?)(?:<\/span>)/);
-					var fReq= +(fReqRX[2]);
-				var fMesRX=xhr.responseText.match(/(?: id="messages_jewel".*?<a .*?<span .*?>)(.*?)(?:<\/span><div .*?<span .*? data-sigil="count">)(.*?)(?:<\/span>)/);
-					var fMes= +(fMesRX[2]);
-				var fNotRX=xhr.responseText.match(/(?: id="notifications_jewel".*?<a .*?<span .*?>)(.*?)(?:<\/span><div .*?<span .*? data-sigil="count">)(.*?)(?:<\/span>)/);
-					var fNot= +(fNotRX[2]);
+				var fReqRX=xhr.responseText.match(/(?:<a accesskey="\d+" href="\/friends.*?>)([^<].*?)(?:(?:<\/a>)|(?:<.*?>\()(\d+)(?:\)<.*?><\/a>))/);
+					var fReq= (+(fReqRX[2])||0);
+				var fMesRX=xhr.responseText.match(/(?:<a accesskey="\d+" href="\/messages.*?>)([^<].*?)(?:(?:<\/a>)|(?:<.*?>\()(\d+)(?:\)<.*?><\/a>))/);
+					var fMes= (+(fMesRX[2])||0);
+				var fNotRX=xhr.responseText.match(/(?:<a accesskey="\d+" href="\/notifications.*?>)([^<].*?)(?:(?:<\/a>)|(?:<.*?>\()(\d+)(?:\)<.*?><\/a>))/);
+					var fNot= (+(fNotRX[2])||0);
 				
 				var counter=fReq+fMes+fNot;
 				clog('Check performed, '+counter+' notification'+(counter==1?'':'s')+'(fReq='+fReq+'|fMes='+fMes+'|fNot='+fNot+').');
