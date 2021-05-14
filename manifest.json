@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Simpliest Facebook notifications (low memory)",
 	"short_name": "Simpliest FB notifications",
-	"version": "2.7.2",
+	"version": "2.7.3",
 	"author": "Kaligula",
 
 	"description": "Extension checks new notifications on Facebook (messages, notifications, friend requests) but consumes very low memory!",

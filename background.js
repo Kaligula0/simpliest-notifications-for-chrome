@@ -216,11 +216,11 @@ function checkNotifications(){
 				chrome.browserAction.setIcon({path:'images/icon.png'});
 
 				var fReqRX=xhr.responseText.match(/(?:<a accesskey="\d+" href="\/friends.*?>)([^<].*?)(?:(?:<\/a>)|(?:<.*?>\()(\d+)(?:\)<.*?><\/a>))/);
-					var fReq= (+(fReqRX[2])||0);
+					var fReq= ( fReqRX ? (+(fReqRX[2])||0) : 0 );
 				var fMesRX=xhr.responseText.match(/(?:<a accesskey="\d+" href="\/messages.*?>)([^<].*?)(?:(?:<\/a>)|(?:<.*?>\()(\d+)(?:\)<.*?><\/a>))/);
-					var fMes= (+(fMesRX[2])||0);
+					var fMes= ( fMesRX ? (+(fMesRX[2])||0) : 0 );
 				var fNotRX=xhr.responseText.match(/(?:<a accesskey="\d+" href="\/notifications.*?>)([^<].*?)(?:(?:<\/a>)|(?:<.*?>\()(\d+)(?:\)<.*?><\/a>))/);
-					var fNot= (+(fNotRX[2])||0);
+					var fNot= ( fNotRX ? (+(fNotRX[2])||0) : 0 );
 				
 				var counter=fReq+fMes+fNot;
 				clog('Check performed, '+counter+' notification'+(counter==1?'':'s')+'(fReq='+fReq+'|fMes='+fMes+'|fNot='+fNot+').');
